@@ -1,0 +1,607 @@
+/*--------------------------------------------*/
+/*basics*/
+/*--------------------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+html{
+    background-color: #ffffff;
+    color: #555;
+    font-family: 'Lato','arial',sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility; 
+}
+.whole_page{
+    width:1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--------------------------------------------*/
+/*header*/
+/*--------------------------------------------*/
+
+
+
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.61),rgba(0, 0, 0, 0.61)),url(img/hero.jpg);
+    background-size:cover;
+    background-psition:center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+.hero_text_box{
+    position: absolute;
+    width:1300px;
+    top :50%;
+    left:15%;
+    right: 15%;
+}
+
+section{
+    padding : 80px;
+}
+
+
+/*--------------------------------------------*/
+/*reusable components*/
+/*--------------------------------------------*/
+
+
+h1{
+    
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 200%;
+}
+
+h2{
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 200%;
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+
+
+h2:after{
+    margin-top: 30px;
+    display: block;
+    border-top: solid 5px ;
+    content: "";
+    width: 200px;
+    margin-left: 40%;
+    
+    color: rgba(255, 175, 28, 0.97);
+     
+}
+
+
+h3{
+    font-weight: 300;
+    word-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 110%;
+}
+
+/*---------pharagraph--------------*/
+
+.phara1{
+    width: 70%;
+    margin-left: 15%;
+    line-height: 145%;
+    padding-bottom: 20px;
+}
+
+.phara2{
+    padding-top: 15px;
+    line-height: 155%;
+    font-size: 90%;
+    padding-bottom: 80px;
+    
+}
+
+.box{
+    padding-left: 1%; 
+}
+
+/*--------------------------------------------*/
+/*icons*/
+/*--------------------------------------------*/
+
+.icon-big{
+    font-size: 350%;
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+    color: rgba(255, 175, 28, 0.97);
+    transition: transform 0.5s;
+}
+
+.icon-big:hover,
+.icon-big:active,.phara2:active{
+    transform: scale(1.50);
+    
+}
+
+.icon-small{
+    display: inline-block;
+    width: 40px;
+    font-size: 150%;
+    color: rgba(255, 175, 28, 0.97);
+    
+}
+
+
+
+
+
+
+/*--------------------------------------------*/
+/*buttons*/
+/*--------------------------------------------*/
+.btn:link,
+.btn:visited{
+    font-size: 200%;
+    display:inline-block;
+    text-decoration: none;
+    border-spacing: 20px;
+    border: solid 1px orange;
+    border-radius: 30px;
+    padding: 10 20;
+    margin-right: 1%;
+}
+
+
+.btn-full:link,
+.btn:visited{
+    color: white;
+    background-color: rgba(255, 175, 28, 0.97);
+}
+
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    color: orange;
+    
+}
+
+
+.btn:hover,
+.btn:active{
+    border-color: #cb880d;
+    transition: border 0.2s,colour 0.2s,background-color 0.2s;
+}
+
+.btn-full:hover,
+.btn-full:active{
+    background-color: rgba(255, 192, 23, 0.55);
+} 
+
+
+.btn-ghost:hover,
+.btn-ghost:active{
+    color: white;
+    background-color:rgba(255, 192, 23, 0.55);
+} 
+
+
+/*--------------------------------------------*/
+/*logo*/
+/*--------------------------------------------*/
+
+.logo{
+    float:left;
+    margin-left: 15%;
+    height: 150px;
+    width: auto;
+    margin-top: 55px;
+}
+
+/*--------------------------------------------*/
+/*navigation bar*/
+/*--------------------------------------------*/
+
+
+.main_nav{
+    text-decoration: none;
+    margin-top: 105px;
+    list-style: none;
+    float:right;
+    margin-right: 25%;
+    position: sticky;
+   
+    
+}
+
+.main_nav li{
+   
+    display: inline-block;
+    margin-left: 20px;
+    border-bottom:2px;
+    
+}
+
+.main_nav li a:link,
+.main_nav li a:visited{
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+.main_nav li a:hover,
+.main_nav li a:active{
+    color: #ffffff;
+    padding-bottom: 10px;
+    border-bottom: solid;
+    border-color: rgba(255, 192, 23, 0.55);
+}
+
+/*--------------------------------------------*/
+/*meals section*/
+/*--------------------------------------------*/
+
+.meals{
+    list-style: none;
+    width: 100%;
+}
+
+.meals li{
+    display: block;
+    float: left;
+    width: 25%;
+    background-color: black;
+}
+
+.meal-photo{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.meal-photo img{
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s,opacity 0.5s;
+    opacity: 0.8;
+}
+
+.meal-photo img:hover,
+.meal-photo img:active{
+    transform: scale(1.20);
+    opacity: 1;
+}
+
+
+
+/*--------------------------------------------*/
+/*HOW IT WORKS SECTION*/
+/*--------------------------------------------*/
+
+
+.apple{
+    display: inline-block;
+    width:40%;
+    height: auto;
+}
+.google{
+     width:40%;
+}
+.section3{
+    width:100%;
+    overflow: hidden;
+    
+    
+}
+
+.iphone{
+    width:40%;
+    margin-left: 50%;
+}
+
+.step_boxes{
+    display: inline-block;
+}
+
+
+ .step_boxes:last-child{
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.work_steps:last-of-type{
+    margin-top: 0px;
+}
+
+
+
+.work_steps{
+    margin-bottom: 40px;
+}
+
+.work_steps div{
+    display: inline-block;
+    border: solid 5px rgba(255, 192, 23, 0.55);
+    font-size: 150%;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    float: left;
+    padding: 10px;
+    color: rgba(255, 192, 23, 0.55);
+    margin-right: 20px;
+}
+
+
+/*--------------------------------------------*/
+/*CITIES SECTION*/
+/*--------------------------------------------*/
+
+.section4{
+    height: 100%;
+}
+
+.city_name{
+    width: 23%;
+    margin-top: 60px;
+  
+    
+}
+.city{
+    display:inline-block;
+    width: 80%;
+    margin-top: 60px;
+    margin-bottom: 15px;
+        transition: transform 0.5s;
+    
+}
+
+
+.city_links{
+    color: rgba(255, 175, 28, 0.97);
+    text-decoration: none;
+    border-bottom:solid 1px rgba(255, 175, 28, 0.97);
+    padding-bottom: 4px;
+    transition:color 0.5s;
+}
+
+.city-feature{
+    padding-top: 13px;
+}
+
+.city_links:hover,.city:hover,
+.city_links:active
+      {transform: scale(1.20);
+          color: black;
+}
+
+/*--------------------------------------------*/
+/*reviews*/
+/*--------------------------------------------*/
+
+.section5{
+    background:linear-gradient(rgba(0, 0, 0, 0.61),rgba(0, 0, 0, 0.61)), url(img/back-customers.jpg);
+    background background-size: cover;
+    backdround-position:center;
+    height: 100%;
+    color: white;
+    background-attachment: fixed;
+}
+
+blockquote{
+    margin-top: 70px;
+    font-size: 120%;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    text-align: center;
+}
+cite{
+    display: block;
+    margin-top: 10%;
+    text-align: center;
+    font-size: 130%; 
+    
+}
+
+blockquote:before{
+    content:"\00ab";
+    display: block;
+    text-align: left;
+    font-size: 200%;
+    color: rgba(255, 175, 28, 0.97);
+}
+cite img{
+    border-radius: 50%;
+    height: 70px;
+    vertical-align: middle;
+    margin-right: 5%;
+}
+
+
+/*--------------------------------------------*/
+/*PRICE SECTION*/
+/*--------------------------------------------*/
+.cr{
+    width: 32%;
+}
+.plan_box{
+    width: 90%;
+   
+    margin-left: 10%;
+    border: 2px solid orange;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fafafa;
+    box-shadow: 20px 16px #dddddd; 
+    margin-top: 15%;
+    transition: 0.5s;
+   
+    
+}
+.plan_box h3{
+    color: orange;
+}
+
+.plan_box ul i{
+    display: inline-block;
+     width: 30px;
+    color:orange;
+}
+.plan_box a{
+    margin-left: 15%;
+    margin-top: 10%
+}
+
+.plan_box ul li{
+    list-style: none;
+    margin-bottom: 3%;
+    margin-top: 1.5%
+    
+}
+.plan_price{
+    font-size: 230%;
+    margin: 30 0 30 0;;
+    float: left;
+        
+}
+.plan_price_meal{
+    margin-bottom: 7%;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.plan_box:hover{
+    transform: scale(1.10);
+}
+
+
+/*--------------------------------------------*/
+/*FORM*/
+/*--------------------------------------------*/
+
+.contact-form{
+    
+  
+    width: 60%;
+    margin: 0 auto;
+    
+}
+.section-7{
+    margin-top: 35%;
+    overflow: hidden;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 50%;
+    padding: 7px;
+    border-radius:10px; 
+    border: solid 1px #989898;
+    color: #e67e22;
+}
+
+select option{
+    font-size: 80%;
+     border-radius: 10px;
+    color: coral;
+    
+    
+}
+
+textarea{
+    height: 130px;
+}
+
+ input[type=submit] {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+     border-radius: 30px;
+     font-size: 120%;
+     padding: 0.5% 2%;
+     
+}
+
+/*--------------------------------------------*/
+/*FOOTER*/
+/*--------------------------------------------*/
+
+footer{
+    background-color: #a7a7a7;
+   height: 20%;
+}
+.about-list {
+    list-style:none;
+   float:left;
+    margin-left:17%;
+    
+}
+.about-list li{
+    display: inline-block;
+    margin-left: 20px;
+    
+    
+    
+}
+
+.about-list li a{
+    text-decoration: none;
+    color: beige;
+    padding-bottom: 6px;
+    transition: border 0.5s,color 1s;
+}
+.icon-list{
+    list-style:none;
+   float:right;
+    margin-right: 30%;
+    
+}
+.icon-list li{
+    display:inline-block;
+    width: 40px;
+}
+
+.icon-list a{
+    text-decoration: none;
+    color: beige;
+     padding-bottom: 6px;
+    transition: border 0.5s,color 1s;
+    
+    
+}
+
+.about-list li a:hover,.icon-list li a:hover{
+    color: rgba(64, 64, 64, 0.68);
+    
+    border-bottom: solid rgba(64, 64, 64, 0.68) 4px;
+   
+}
+
+.footer-text{
+    text-align: center;
+    padding-top:10%;
+    font-size: 120%;
+    color: grey;
+}
+
+
+.hero_text_box {
+    
+}
